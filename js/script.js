@@ -58,12 +58,22 @@ const countdown = setInterval(function () {
         // Remove class d-none to button and inputs
         calcButton.classList.remove('d-none');
         inputElements.classList.remove('d-none');
-
-
-
-
-
-
     }
-
 }, seconds);
+
+calcButton.addEventListener('click', function () {
+
+    // Link to input elements
+    const input = document.querySelectorAll('input');
+    // Create input arrays
+    const userInputs = [];
+
+    // Pick value for every input element
+    for (let i = 0; i < input.length; i++) {
+        userInputs.push(input[i].value);
+    }
+    console.log(userInputs);
+
+
+}
+)
