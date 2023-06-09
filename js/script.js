@@ -25,12 +25,13 @@ function howManyInIt(array1, array2) {
 // Link DOM elements
 const countdownElement = document.querySelector('.timer');
 const numbersContainer = document.querySelector('.numbers-container');
-const calcButton = document.querySelector('btn');
+const calcButton = document.querySelector('.btn');
+const inputElements = document.getElementById('input-group');
 
 // Variables
 const extractedNumbers = generateNumbers(5);
 let toInject = '';
-let countdownSeconds = 10;
+let countdownSeconds = 5;
 const seconds = countdownSeconds * 100;
 
 // Generate strings to inject
@@ -39,7 +40,7 @@ for (let i = 0; i < extractedNumbers.length; i++) {
 };
 
 // Inject string
-numbersContainer.innerHTML = toInject;
+numbersContainer.innerHTML += toInject;
 
 // Create countdown
 const countdown = setInterval(function () {
@@ -47,6 +48,22 @@ const countdown = setInterval(function () {
     if (countdownSeconds === 0) {
         countdownElement.innerText = '--';
         clearInterval(countdown);
+        const numbers = document.querySelectorAll('div.numbers');
+
+        // Add class d-none to numbers
+        for (let i = 0; i < numbers.length; i++) {
+            numbers[i].classList.add('d-none');
+        }
+
+        // Remove class d-none to button and inputs
+        calcButton.classList.remove('d-none');
+        inputElements.classList.remove('d-none');
+
+
+
+
+
+
     }
 
 }, seconds);
