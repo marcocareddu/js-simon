@@ -9,12 +9,12 @@ main {
     height: 100vh;
 }
 
-/* .box {
-    margin: 0 auto;
-    width: 400px;
-} */
-
 .numbers {
     width: 100px;
     height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    padding-left: 15px;
 }
