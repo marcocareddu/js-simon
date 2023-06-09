@@ -52,8 +52,8 @@ Consigli del giorno:
         - Rimuovere la classe `d-none` dal pulsante calcola.
         - Fermare l'intervallo.
 - **AL CLICK** del pulsante calcola.
-    - Prendere gli input dell'utente e metterli in array `userInput`.
-    - Verificare i numeri di `userInput` con `howManyInIt`.
+    - Prendere gli input dell'utente e metterli in array `userInputs`.
+    - Verificare i numeri di `userInputs` con `howManyInIt`.
     - Stampare in pagina il risultato di `howManyInIt` e la sua lunghezza.
 
 
