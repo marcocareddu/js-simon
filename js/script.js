@@ -70,10 +70,15 @@ calcButton.addEventListener('click', function () {
 
     // Pick value for every input element
     for (let i = 0; i < input.length; i++) {
-        userInputs.push(input[i].value);
+        userInputs.push(parseInt(input[i].value));
     }
     console.log(userInputs);
 
+    // Verify user inputs are in extracted numbers
+    const rightNumbers = howManyInIt(extractedNumbers, userInputs);
+    console.log(rightNumbers);
 
+    // Display result in DOM
+    countdownElement.innerText = `Hai indovinato ${rightNumbers.length} numeri! ${rightNumbers}`;
 }
 )
