@@ -30,8 +30,8 @@ const calcButton = document.querySelector('btn');
 // Variables
 const extractedNumbers = generateNumbers(5);
 let toInject = '';
-const countdownSeconds = 10;
-const seconds = countdownSeconds * 1000;
+let countdownSeconds = 10;
+const seconds = countdownSeconds * 100;
 
 // Generate strings to inject
 for (let i = 0; i < extractedNumbers.length; i++) {
@@ -40,3 +40,13 @@ for (let i = 0; i < extractedNumbers.length; i++) {
 
 // Inject string
 numbersContainer.innerHTML = toInject;
+
+// Create countdown
+const countdown = setInterval(function () {
+    countdownElement.innerText = --countdownSeconds;
+    if (countdownSeconds === 0) {
+        countdownElement.innerText = '--';
+        clearInterval(countdown);
+    }
+
+}, seconds);
