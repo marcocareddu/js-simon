@@ -31,7 +31,7 @@ const inputElements = document.getElementById('input-group');
 // Variables
 const extractedNumbers = generateNumbers(5);
 let toInject = '';
-let countdownSeconds = 5;
+let countdownSeconds = 10;
 const seconds = countdownSeconds * 100;
 
 // Generate strings to inject
