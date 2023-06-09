@@ -28,8 +28,15 @@ const numbersContainer = document.querySelector('.numbers-container');
 const calcButton = document.querySelector('btn');
 
 // Variables
-const extractedNumbers = [];
+const extractedNumbers = generateNumbers(5);
 let toInject = '';
 const countdownSeconds = 10;
 const seconds = countdownSeconds * 1000;
 
+// Generate strings to inject
+for (let i = 0; i < extractedNumbers.length; i++) {
+    toInject += `<div class="numbers">${extractedNumbers[i]}</div>`;
+};
+
+// Inject string
+numbersContainer.innerHTML = toInject;
