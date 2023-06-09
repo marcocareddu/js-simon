@@ -1,0 +1,20 @@
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    height: 100vh;
+}
+
+/* .box {
+    margin: 0 auto;
+    width: 400px;
+} */
+
+.numbers {
+    width: 100px;
+    height: 100px;
+}
