@@ -12,9 +12,14 @@ main {
 .numbers {
     width: 100px;
     height: 100px;
+
+    font-size: 50px;
+    padding-left: 15px;
+}
+
+.numbers-container,
+#input-group {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
-    padding-left: 15px;
 }
